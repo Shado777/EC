@@ -61,10 +61,29 @@
             </div>
           </div>
           <script type="text/javascript">
-            function validate() {
+            function validateUser() {
               var user = document.getElementById("UName").value;
               if(user == '') {
                 alert("Please provide your username!");
+                return true;
+              }
+            }
+            function validatePass() {
+              var pass = document.getElementById("UPass").value;
+              if(pass == '') {
+                alert("Please provide your password!");
+                return true;
+              }
+            }
+            function validate() {
+              var userVal = validateUser();
+              var passVal = validatePass();
+
+              if(userVal == true) {
+                validateUser();
+              }
+              if(passVal == true) {
+                validatePass();
               }
             }
           </script>

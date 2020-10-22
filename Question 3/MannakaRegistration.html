@@ -68,11 +68,72 @@
           <input type="password" class="inputBox" id="UPass" name="" value="" placeholder="Enter your password">
         </br></br>
           <div align="right">
-            <button class="buttonS" type="button" onclick="validate()" name="button">Login</button>
+            <button class="buttonS" type="button" onclick="allValidate()" name="button">Login</button>
           </div>
         </div>
         </fieldset>
       </div>
+      <script type="text/javascript">
+        function validateFirst(){
+          var first = document.getElementById("fName").value;
+          if(first ==""){
+            alert("Please provide firstname");
+            return true;
+          }
+        }
+        function validateSur(){
+          var sur = document.getElementById("lName").value;
+          if(sur ==""){
+            alert("Please provide surname");
+            return true;
+          }
+        }
+        function validateEmail(){
+          var emailToVal = document.getElementById("uEmail").value;
+          var emailValidated = emailToVal.search(/^\S+@\S+\.\S+$/);
+          if(emailValidated !=0){
+            alert("Please provide email");
+            return true;
+          }
+        }
+        function validateUser(){
+          var user = document.getElementById("UName").value;
+          if(user ==""){
+            alert("Please provide username");
+            return true;
+          }
+        }
+        function validatePass(){
+          var pass = document.getElementById("UPass").value;
+          if(pass ==""){
+            alert("Please provide password");
+            return true;
+          }
+        }
+        function allValidate() {
+          var firstVal = validateFirst();
+          var lastVal = validateSur();
+          var emailVal = validateEmail();
+          var userVal = validateUser();
+          var passVal = validatePass();
+
+          if(firstVal == true) {
+            validateFirst();
+          }
+          if(lasttVal == true) {
+            validateSur();
+          }
+          if(emailVal == true) {
+            validateEmail();
+          }
+          if(userVal == true) {
+            validateUser();
+          }
+          if(passVal == true) {
+            validatePass();
+          }
+        }
+      </script>
     </form>
   </body>
 </html>
