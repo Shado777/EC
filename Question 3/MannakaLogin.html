@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <style media="screen">
+      .loginBox {
+        left:0;
+        display: block;
+        width: cover;
+        height: auto;
+      }
+
+      .inputBox{
+        width: 95%;
+        padding: 15px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        type:text;
+      }
+
+      .buttonS {
+        width: 40%;
+        background-color: green;
+        color: white;
+        padding: 14px 20px;
+        border: 1px;
+        border-color: black;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .fieldWidth {
+        width: 25%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <form action="MannakaLogin.html" method="post">
+
+      <div class="loginBox" align="center">
+        <fieldset class="fieldWidth">
+          <legend><b>Login</b></legend>
+          </br>
+          <div align="left">
+            <!--User name-->
+            <label for="UName">Username:</label></br>
+            <input class="inputBox" id="UName" name="" value="" placeholder="Enter your username">
+            </br></br>
+            <!--Password -->
+            <label for="UPass">Password:</label></br>
+            <input type="password" class="inputBox" id="UPass" name="" value="" placeholder="Enter your password">
+            </br></br>
+            <div align="right">
+              <button class="buttonS" type="button" onclick="validate()" name="button">Login</button>
+            </div>
+          </div>
+          <script type="text/javascript">
+            function validate() {
+              var user = document.getElementById("UName").value;
+              if(user == '') {
+                alert("Please provide your username!");
+              }
+            }
+          </script>
+        </fieldset>
+      </div>
+    </form>
+  </body>
+</html>
